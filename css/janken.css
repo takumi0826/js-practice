@@ -1,0 +1,29 @@
+h2 {
+  margin-top: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cp figure {
+  text-align: center;
+}
+
+.myhand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.myhand button {
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.myhand button:last-child {
+  margin-right: 0;
+}
+/*# sourceMappingURL=janken.css.map */

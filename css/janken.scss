@@ -1,0 +1,22 @@
+h2 {
+  margin-top: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.cp {
+  figure {
+    text-align: center;
+  }
+}
+.myhand {
+  display: flex;
+  justify-content: center;
+  button {
+    padding: 10px 20px;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>じゃんけん</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/janken.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="global-nav">
+        <ul class="global-nav__list">
+          <li class="global-nav__list-item"><a href="/index.html" class="global-nav__link">タイピング</a></li>
+          <li class="global-nav__list-item"><a href="/marubatsu.html" class="global-nav__link">丸ばつゲーム</a></li>
+          <li class="global-nav__list-item"><a href="/janken.html" class="global-nav__link">じゃんけん</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="app">
+      <div class="main-wrapper">
+        <h2 v-if="cpHand === 'goo'">グー！</h2>
+        <h2 v-if="cpHand === 'choki'">チョキ！</h2>
+        <h2 v-if="cpHand === 'paa'">パー！</h2>
+        <div class="cp">
+          <figure v-if="cpHand === 'goo'"><img src="/janken/img/gu.png" alt="" /></figure>
+          <figure v-else-if="cpHand === 'choki'"><img src="/janken/img/choki.png" alt="" /></figure>
+          <figure v-else-if="cpHand === 'paa'"><img src="/janken/img/pa.png" alt="" /></figure>
+        </div>
+        <div class="myhand">
+          <button v-on:click="fight('goo')">グー</button>
+          <button v-on:click="fight('choki')">チョキ</button>
+          <button v-on:click="fight('paa')">パー</button>
+        </div>
+        <!-- <div class="judgment">
+                <p>勝敗 :</p>
+                <p v-if="cpHand === hand">引き分け</p>
+                <p v-else-if="cpHand === 'goo' && hand === 'paa'">勝ち</p>
+                <p v-else-if="cpHand === 'choki' && hand === 'goo'">勝ち</p>
+                <p v-else-if="cpHand === 'paa' && hand === 'choki'">勝ち</p>
+                <p v-else-if="cpHand === 'goo' && hand === 'choki">負け</p>
+                <p v-else-if="cpHand === 'choki' && hand === 'paa'">負け</p>
+                <p v-else-if="cpHand === 'paa' && hand === 'goo'">負け</p>
+            </div> -->
+      </div>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="/js/janken.js"></script>
+  </body>
+</html>

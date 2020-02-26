@@ -1,0 +1,30 @@
+table {
+  margin: 0 auto;
+}
+table,
+td,
+th {
+  border: 1px solid #595959;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 3px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+th {
+  background: #f0e6cc;
+}
+.even {
+  background: #fbf8f0;
+}
+.odd {
+  background: #fefcf9;
+}
+h2 {
+  text-align: center;
+  margin: 30px 0;
+}
